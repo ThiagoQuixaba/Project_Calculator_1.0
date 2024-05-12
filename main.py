@@ -1,4 +1,4 @@
-import CalculatorFunctions
+import functions
 
 #Variables:
 choices = [None, None]
