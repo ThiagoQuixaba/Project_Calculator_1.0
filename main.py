@@ -11,7 +11,7 @@ while True:
     while True:
         try:
             values[1] = float(input("Sistema: Insira 1° Valor: "))
-            CalculatorFunctions.Clean()
+            functions.Clean()
             break
         except:
             print("Sistema: 3RR0R! \nSistema: Valor Invalido! \n")
@@ -29,7 +29,7 @@ while True:
                     print("Sistema: 3RR0R! \nSistema: Operação Invalida! \n")
                     pass
                 else:
-                    CalculatorFunctions.Clean()
+                    functions.Clean()
                     break
             except:
                 print("Sistema: 3RR0R! \nSistema: Operação Invalida! \n")
@@ -42,14 +42,14 @@ while True:
             while True:
                 try:
                     values[2] = float(input("Sistema: Insira 2° Valor: "))
-                    CalculatorFunctions.Clean()
+                    functions.Clean()
                     break
                 except:
                     print("Sistema: 3RR0R! \nSistema: Valor Invalido! \n")
                     pass
             
             #Performing Operation:
-            Result = CalculatorFunctions.Addition(values[1], values[2])
+            Result = functions.Addition(values[1], values[2])
             print(f"Sistema: {values[1]} + {values[2]} = {Result}")
         
         #Subtraction:
@@ -59,14 +59,14 @@ while True:
             while True:
                 try:
                     values[2] = float(input("Sistema: Insira 2° Valor: "))
-                    CalculatorFunctions.Clean()
+                    functions.Clean()
                     break
                 except:
                     print("Sistema: 3RR0R! \nSistema: Valor Invalido! \n")
                     pass
             
             #Performing Operation:
-            Result = CalculatorFunctions.Subtraction(values[1], values[2])
+            Result = functions.Subtraction(values[1], values[2])
             print(f"Sistema: {values[1]} - {values[2]} = {Result}")
 
         #Multiplication:
@@ -76,14 +76,14 @@ while True:
             while True:
                 try:
                     values[2] = float(input("Sistema: Insira 2° Valor: "))
-                    CalculatorFunctions.Clean()
+                    functions.Clean()
                     break
                 except:
                     print("Sistema: 3RR0R! \nSistema: Valor Invalido! \n")
                     pass
             
             #Performing Operation:
-            Result = CalculatorFunctions.Multiplication(values[1], values[2])
+            Result = functions.Multiplication(values[1], values[2])
             print(f"Sistema: {values[1]} x {values[2]} = {Result}")
 
         #Division:
@@ -93,7 +93,7 @@ while True:
             while True:
                 try:
                     values[2] = float(input("Sistema: Insira 2° Valor: "))
-                    CalculatorFunctions.Clean()
+                    functions.Clean()
                     break
                 except:
                     print("Sistema: 3RR0R! \nSistema: Valor Invalido! \n")
@@ -101,7 +101,7 @@ while True:
             
             #Performing Operation:
             if values[2] != 0:
-                Result = CalculatorFunctions.Division(values[1], values[2])
+                Result = functions.Division(values[1], values[2])
                 print(f"Sistema: {values[1]} ÷ {values[2]} = {Result}")
             else:
                 print(f"Sistema: {values[1]} ÷ {values[2]} = Indeterminado")
@@ -114,14 +114,14 @@ while True:
             while True:
                 try:
                     values[2] = float(input("Sistema: Insira 2° Valor: "))
-                    CalculatorFunctions.Clean()
+                    functions.Clean()
                     break
                 except:
                     print("Sistema: 3RR0R! \nSistema: Valor Invalido! \n")
                     pass
             
             #Performing Operation:
-            Result = CalculatorFunctions.Exponentiation(values[1], values[2])
+            Result = functions.Exponentiation(values[1], values[2])
             print(f"Sistema: {values[1]} ^ {values[2]} = {Result}")
 
         #Radiciation:
@@ -131,7 +131,7 @@ while True:
             while True:
                 try:
                     values[2] = float(input("Sistema: Insira 2° Valor: "))
-                    CalculatorFunctions.Clean()
+                    functions.Clean()
                     break
                 except:
                     print("Sistema: 3RR0R! \nSistema: Valor Invalido! \n")
@@ -150,7 +150,7 @@ while True:
                 print(f"Sistema: Raiz {values[2]}° de {values[1]} = Inexistente")
                 break
             else:
-                Result = CalculatorFunctions.Radiciation(values[1], values[2])
+                Result = functions.Radiciation(values[1], values[2])
                 print(f"Sistema: Raiz {values[2]}° de {values[1]} = {Result}")
 
         #logarithm:
@@ -160,7 +160,7 @@ while True:
             while True:
                 try:
                     values[2] = float(input("Sistema: Insira 2° Valor: "))
-                    CalculatorFunctions.Clean()
+                    functions.Clean()
                     break
                 except:
                     print("Sistema: 3RR0R! \nSistema: Valor Invalido! \n")
@@ -168,7 +168,7 @@ while True:
             
             #Performing Operation:
             if values[1] > 0 and values[2] > 0 and values[2] != 0:
-                Result = CalculatorFunctions.logarithm(values[1], values[2])
+                Result = functions.logarithm(values[1], values[2])
                 print(f"Sistema: log({values[1]}) na base {values[2]} = {Result}")
             else:
                 print(f"Sistema: log({values[1]}) na base {values[2]} = Inexistente")
@@ -182,7 +182,7 @@ while True:
                 if values[1] == 0 or values[1] == 1:
                     Result = 1
                 else:
-                    Result = CalculatorFunctions.Factorial(int(values[1]))
+                    Result = functions.Factorial(int(values[1]))
                 print(f"Sistema: {values[1]}! = {Result}")
             else:
                 print(f"Sistema: {values[1]}! = Inexistente")
@@ -202,7 +202,7 @@ while True:
                 break
             else:
                 values[1] = Result
-                CalculatorFunctions.Clean()
+                functions.Clean()
                 pass
         except:
             print("Sistema: 3RR0R! \nSistem: ERRO DESCONHECIDO! \n")
